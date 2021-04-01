@@ -16,7 +16,7 @@ if [ ! -z "$GDToken" ];then
     export GDRIVE_CONFIG_DIR="$(pwd)"
     wget https://github.com/ZyCromerZ/gdrive/releases/download/v0/gdrive
     chmod +x gdrive
-    GetFolder="$(cat gdrive-id/$2)"
+    GetFolder="$(cat $UploaderPath/gdrive-id/$2)"
 
     if [ ! -z "$3" ];then
         . $UploaderPath/create-folder.sh "$3"
