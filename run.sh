@@ -11,8 +11,10 @@ if [ ! -z "$GDToken" ];then
     chmod +x $UploaderPath/create-folder.sh
     chmod +x $UploaderPath/etc/sourceforge.sh
     chmod +x $UploaderPath/etc/osdn.sh
+    chmod +x $UploaderPath/etc/GDworker.sh
     . $UploaderPath/etc/sourceforge.sh "$2" "$3" "$4" "$5" "$6"
     . $UploaderPath/etc/osdn.sh "$2" "$3" "$4" "$5" "$6"
+    . $UploaderPath/etc/GDworker.sh "$2" "$3" "$4" "$5" "$6"
     export GDRIVE_CONFIG_DIR="$(pwd)"
     wget https://github.com/ZyCromerZ/gdrive/releases/download/v0/gdrive
     chmod +x gdrive
