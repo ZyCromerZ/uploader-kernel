@@ -61,7 +61,7 @@ if [ ! -z "$GDToken" ];then
     fi
 
     if [ "$1" != "None" ];then
-        . $UploaderPath/upload-file "$1"
+        . $UploaderPath/upload-file.sh "$1"
         if [ ! -z "$OsdnPath" ];then
             upOsdn "$1" "$OsdnPath" 2> /dev/null 1> /dev/null
         fi
